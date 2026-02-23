@@ -55,7 +55,8 @@ int main(void) {
 
 	// Complete your code here
     switch (choice) {
-        case :
+        case 1:
+            
             break;
         default:
             printf("Invalid option\n");
