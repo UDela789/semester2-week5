@@ -27,12 +27,14 @@ int main(void){
 
 	}else{
 
+		int raise = strlen(hex)-1;
+
 		//loop thru evry charecter
-		for(int i = 0; i < strlen(hex); ++i){
+		for(int i =0; i < strlen(hex); ++i){
 
 			
-
-			int power = (int)pow(16, i);
+			
+			int power = (int)pow(16, raise);
 				
 
 				
@@ -92,13 +94,10 @@ int main(void){
 				
 				}
 
-				
-
-
-			
-
+			raise -=1;
+			//printf("decimal:%d\n\n", decimal);
 		}
-		printf("decimal:%d\n", decimal);
+		printf("decimal:%u\n", decimal);
 	
 
 		// print the decimal result

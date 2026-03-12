@@ -7,7 +7,7 @@
 
 int main(void){
 
-    char hex[] = "1A";
+    char hex[] = "1A3";
     int decimal=0;
     
 
@@ -16,10 +16,11 @@ int main(void){
     for(int i = 0; i > strlen(hex); ++i){
         printf("iteration: %d\n", i );
 
-        int power = pow(16, i);
+        int raise = strlen(hex) - i;
+        int power = pow(16, raise);
         //printf("power: 16^%d, (%d)\n", i, power);
 
-        printf("hex[%d]: %c\n\n", i, hex[strlen(hex) - i]);
+        printf("hex[%d]: %c\n\n", i, hex[i]);
         
 
         // match-case series
@@ -96,12 +97,13 @@ int main(void){
                 break;
             default:
                 printf("Error: Invalid Hexadecimal\n");
-            		break;
-        
+            	break;
         }
         
 
 
     }
-    printf("decimal: %d", decimal);
+    printf("decimal: %d\n", decimal);
+
+    return 0;
 }
